@@ -163,7 +163,7 @@ button:hover {
     background:linear-gradient(135deg,rgb(127, 178, 196),rgb(155, 104, 196), rgb(41, 127, 177));
     border-radius: 30px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 0px 10px;
@@ -464,7 +464,7 @@ button:hover {
     }
     .card-container{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4,10z0vh);
+        grid-template-rows: repeat(4,80vh);
     }
     .cards{
         justify-content: center;
@@ -494,7 +494,7 @@ button:hover {
         justify-content: flex-start;
     }
     .card-container{
-        grid-template-rows: repeat(4,100vh);
+        grid-template-rows: repeat(4,80vh);
     }
     #image1{
         width: 150px;
@@ -507,11 +507,6 @@ button:hover {
     }
     .card-container{
         margin: 2px 10px;
-    }
-    .submit{
-        justify-content: center;
-        width: 100px;
-        height: 40px;
     }
     *{
         overflow-x: hidden;
