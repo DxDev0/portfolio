@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    /* overflow-x: hidden; */
 }
 
 h1, h2, h3 {
@@ -70,16 +69,16 @@ h1{
 .main{
     margin: 20px 0px;
     padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    min-height: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .main .left{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     line-height: 40px;
     min-height: 100px;
@@ -146,7 +145,8 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 100vw;
+    align-items: center;
+    width: 100%;
 }
 .cards .text{
     margin-top: 20px;
@@ -155,7 +155,7 @@ button:hover {
 .card-container{
    display: grid;
    grid-template-columns: 1fr 1fr;
-   grid-template-rows: 60vh 60vh;
+   grid-template-rows: 40vh 40vh;
    gap:50px;
    margin: 20px 50px;
 }
@@ -163,11 +163,15 @@ button:hover {
     background:linear-gradient(135deg,rgb(127, 178, 196),rgb(155, 104, 196), rgb(41, 127, 177));
     border-radius: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
     align-items: center;
-    padding: 0px 10px;
+    padding: 30px 10px;
     color: white;
+}
+.cards p{
+    text-align: center;
 }
 .title{
     text-align: center;
@@ -336,13 +340,13 @@ button:hover {
         width: 0;
     }
 }
+/* contactact-section */
 .contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .contact-container{
     display: flex;
@@ -352,15 +356,16 @@ button:hover {
     background: linear-gradient(135deg, #448dc9, #ac63dd);
     border-radius: 20px;
     color: white;
-    width: 300px;
-    min-height: 400px;
+    width: 400px;
+    min-height: 500px;
 }
 .contact-container h2{
    margin-bottom: 20px;
 }
+
 .form input{
     width: 100%; 
-    padding: 7px; 
+    padding: 6px; 
     border-radius: 10px;
     border: 2px solid white;
     margin-bottom: 10px;
@@ -376,24 +381,10 @@ button:hover {
     body{
         width: 100%;
     }
-    .main{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-    }
-    .main .left{
-        text-align: center;
-        order: 1;
-        padding: 20px 0;
-    }
-    .main .right{
-        order: 2;
-    text-align: center;
-    }
     .main .right img {
     max-width: 100%;
     height: auto;
     height: 400px;
-    margin-top: 70px;
     }
     .about{
         text-align: center;
@@ -401,9 +392,6 @@ button:hover {
 
 }
 @media  (min-width:1024px){
-    .main .left{
-        padding-top: 170px; 
-    }
     .card{
         overflow-x: hidden;
     }
@@ -464,7 +452,7 @@ button:hover {
     }
     .card-container{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4,80vh);
+        grid-template-rows: repeat(4,40vh);
     }
     .cards{
         justify-content: center;
@@ -494,7 +482,7 @@ button:hover {
         justify-content: flex-start;
     }
     .card-container{
-        grid-template-rows: repeat(4,80vh);
+        grid-template-rows: repeat(4,40vh);
     }
     #image1{
         width: 150px;
@@ -508,9 +496,7 @@ button:hover {
     .card-container{
         margin: 2px 10px;
     }
-    *{
-        overflow-x: hidden;
-    }
+    
     .left h2{
         font-size: 30px;
     }
