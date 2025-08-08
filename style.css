@@ -155,7 +155,7 @@ button:hover {
 .card-container{
    display: grid;
    grid-template-columns: 1fr 1fr;
-   grid-template-rows: 40vh 40vh;
+   grid-template-rows: 60vh 60vh;
    gap:50px;
    margin: 20px 50px;
 }
@@ -167,7 +167,7 @@ button:hover {
     align-items: center;
     flex-direction: column;
     align-items: center;
-    padding: 30px 10px;
+    padding: 10px 10px;
     color: white;
 }
 .cards p{
@@ -204,8 +204,52 @@ button:hover {
     font-weight: 400;
     overflow: hidden;
 }
+.btn-primary {
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: #2563eb; /* blue */
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: #f3f4f6; /* light grey */
+    color: #374151; /* dark grey text */
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-secondary:hover {
+    background-color: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+.btn-disabled {
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: not-allowed;
+    transform: none !important; /* no hover movement */
+}
+.btn-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 50px; /* space between buttons */
+    flex-wrap: wrap; /* keeps them responsive */
+}
 .cards:hover{
-    transform: scale(1.1);
+    transform: scale(1.002);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 /* Skill & Education */
@@ -452,7 +496,7 @@ button:hover {
     }
     .card-container{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4,40vh);
+        grid-template-rows: repeat(4,70vh);
     }
     .cards{
         justify-content: center;
@@ -482,7 +526,7 @@ button:hover {
         justify-content: flex-start;
     }
     .card-container{
-        grid-template-rows: repeat(4,40vh);
+        grid-template-rows: repeat(4,80vh);
     }
     #image1{
         width: 150px;
